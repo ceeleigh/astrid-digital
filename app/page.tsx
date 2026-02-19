@@ -63,6 +63,43 @@ export default function Page() {
       </section>
 
       {/* Services */}
+      <section className="py-24 px-6 bg-black text-white">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-4xl font-bold mb-12">What Clients Say</h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur">
+        <p className="text-gray-300 mb-6">
+          “Astrid Digital completely transformed our online presence.
+          We started getting real inquiries within weeks.”
+        </p>
+        <h4 className="font-semibold">Sarah M.</h4>
+        <span className="text-sm text-gray-500">Boutique Owner</span>
+      </div>
+
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur">
+        <p className="text-gray-300 mb-6">
+          “Professional, fast, and extremely creative. Our website
+          finally reflects the quality of our business.”
+        </p>
+        <h4 className="font-semibold">David R.</h4>
+        <span className="text-sm text-gray-500">Marketing Consultant</span>
+      </div>
+
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur">
+        <p className="text-gray-300 mb-6">
+          “We saw a noticeable increase in bookings after launching.
+          Highly recommend Astrid Digital.”
+        </p>
+        <h4 className="font-semibold">Emily T.</h4>
+        <span className="text-sm text-gray-500">Fitness Studio Owner</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
       <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-24">
         {services.map((s, i) => (
           <motion.div
