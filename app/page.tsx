@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Testimonials from "./Testimonials"
 
 export default function Page() {
   const services = [
@@ -63,70 +64,80 @@ export default function Page() {
       </section>
 
       {/* Services */}
-      "use client"
+      {/* Testimonials Section */}
+<section className="py-24 px-6 bg-black text-white">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-4xl font-bold mb-12">Client Testimonials</h2>
 
-import { useState, useEffect } from "react"
+    <div className="bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur hover:scale-105 transition-all duration-500">
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Olivia M.",
-      role: "Boutique Owner",
-      text: "Working with Astrid Digital felt seamless. The design captured our brand beautifully and gave us a polished, modern presence.",
-    },
-    {
-      name: "Marcus T.",
-      role: "Consultant",
-      text: "Professional, responsive, and detail-oriented. The site feels premium and elevated our credibility instantly.",
-    },
-    {
-      name: "Jasmine L.",
-      role: "Wellness Coach",
-      text: "Clean, strategic, and beautifully executed. I finally feel confident sending clients to my website.",
-    },
-  ]
-
-  const [index, setIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  return (
-    <section className="py-24 px-6 bg-black text-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">Client Testimonials</h2>
-
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur transition-all duration-500 hover:scale-105">
-
-          <div className="flex justify-center mb-4">
-            {"★★★★★"}
-          </div>
-
-          <p className="text-gray-300 text-lg mb-8">
-            “{testimonials[index].text}”
-          </p>
-
-          <h4 className="font-semibold text-xl">
-            {testimonials[index].name}
-          </h4>
-
-          <span className="text-sm text-gray-500">
-            {testimonials[index].role}
-          </span>
-        </div>
+      <div className="flex justify-center mb-4 text-yellow-400 text-xl">
+        ★★★★★
       </div>
-    </section>
-  )
-}
 
+      <p className="text-gray-300 text-lg mb-8">
+        “Working with Astrid Digital felt seamless. The design captured our brand beautifully and gave us a polished, modern presence.”
+      </p>
+
+      <h4 className="font-semibold text-xl">
+        Olivia M.
+      </h4>
+
+      <span className="text-sm text-gray-500">
+        Boutique Owner
+      </span>
     </div>
   </div>
 </section>
+
+{/* Trusted Brands Section */}
+<section className="py-16 bg-black text-white">
+  <div className="max-w-6xl mx-auto text-center">
+    <p className="text-gray-500 uppercase tracking-widest mb-8">
+      Trusted By Emerging Brands
+    </p>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand One
+      </div>
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand Two
+      </div>
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand Three
+      </div>
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand Four
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+<section className="py-16 bg-black text-white">
+  <div className="max-w-6xl mx-auto text-center">
+    <p className="text-gray-500 uppercase tracking-widest mb-8">
+      Trusted By Emerging Brands
+    </p>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand One
+      </div>
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand Two
+      </div>
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand Three
+      </div>
+      <div className="border border-white/10 rounded-xl py-6">
+        Brand Four
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-24">
         {services.map((s, i) => (
