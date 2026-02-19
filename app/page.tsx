@@ -91,14 +91,15 @@ export default function Page() {
           Reach out to discuss your goals and receive a custom proposal.
         </p>
       <form
-  onSubmit={(e) => {
-    e.preventDefault();
-    alert("Form submitted! (We’ll connect email next)");
-  }}
+  action="https://formspree.io/f/mzdavwev"
+  method="POST"
   className="space-y-4 text-left"
+>
+
 >
   <input
     type="text"
+    name="name"
     placeholder="Your Name"
     required
     className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-white/30"
@@ -106,12 +107,14 @@ export default function Page() {
 
   <input
     type="email"
+    name="email"
     placeholder="Email Address"
     required
     className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-white/30"
   />
 
   <textarea
+  name="message"
     placeholder="Tell me about your project..."
     rows={4}
     required
