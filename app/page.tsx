@@ -114,30 +114,6 @@ export default function Page() {
   </div>
 </section>
 
-  
-<section className="py-16 bg-black text-white">
-  <div className="max-w-6xl mx-auto text-center">
-    <p className="text-gray-500 uppercase tracking-widest mb-8">
-      Trusted By Emerging Brands
-    </p>
-
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
-      <div className="border border-white/10 rounded-xl py-6">
-        Brand One
-      </div>
-      <div className="border border-white/10 rounded-xl py-6">
-        Brand Two
-      </div>
-      <div className="border border-white/10 rounded-xl py-6">
-        Brand Three
-      </div>
-      <div className="border border-white/10 rounded-xl py-6">
-        Brand Four
-      </div>
-    </div>
-  </div>
-</section>
-
 
       <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-24">
         {services.map((s, i) => (
