@@ -96,7 +96,6 @@ export default function Page() {
   className="space-y-4 text-left"
 >
 
->
   <input
     type="text"
     name="name"
