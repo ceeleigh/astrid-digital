@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Testimonials from "./Testimonials"
+
 
 export default function Page() {
   const services = [
@@ -63,7 +63,7 @@ export default function Page() {
         </motion.div>
       </section>
 
-      {/* Services */}
+      
       {/* Testimonials Section */}
 <section className="py-24 px-6 bg-black text-white">
   <div className="max-w-4xl mx-auto text-center">
