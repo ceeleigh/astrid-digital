@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,192 +9,229 @@ export default function Page() {
 
   const services = [
     {
-      title: "Content Writing",
-      desc: "SEO blogs, website copy, and brand messaging designed to convert visitors into customers.",
+      title: "Content Writing & Copywriting",
+      desc: "High-converting messaging designed to attract and convert customers."
     },
     {
       title: "Virtual Assistance",
-      desc: "Inbox management, scheduling, research, and operational support for busy founders.",
+      desc: "Operational support that frees business owners to focus on growth."
     },
     {
-      title: "Data & Reporting",
-      desc: "Excel dashboards and organized reporting to give clarity to your business decisions.",
+      title: "Data Analysis",
+      desc: "Clear reporting and insights to help businesses make smarter decisions."
     },
     {
       title: "Customer Support",
-      desc: "Professional client communication that improves retention and brand reputation.",
-    },
+      desc: "Professional client communication that strengthens brand loyalty."
+    }
   ];
 
-  const testimonials = [
+  const pricing = [
     {
-      quote:
-        "Working with Astrid Digital completely upgraded our online presence. Professional, fast, and extremely detail oriented.",
-      name: "Olivia M.",
-      role: "Boutique Owner",
+      name: "Starter",
+      price: "$2,000",
+      features: [
+        "1 Page Premium Website",
+        "Mobile Optimization",
+        "Contact Form Setup",
+        "Basic SEO Setup"
+      ]
     },
     {
-      quote:
-        "Our workflow became significantly smoother. The level of organization and communication was incredible.",
-      name: "Daniel R.",
-      role: "Startup Founder",
+      name: "Growth",
+      price: "$3,500",
+      features: [
+        "Multi-Page Website",
+        "Brand Styling",
+        "Lead Capture System",
+        "Performance Optimization"
+      ]
     },
     {
-      quote:
-        "If you're scaling a business and need reliable support, Astrid Digital is a no-brainer.",
-      name: "Sophia L.",
-      role: "Marketing Director",
-    },
+      name: "Premium",
+      price: "$5,000",
+      features: [
+        "Full Business Website",
+        "Automation Setup",
+        "Analytics Dashboard",
+        "Priority Support"
+      ]
+    }
   ];
+
+  const cardStyle =
+    "rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 transition-all duration-300";
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
 
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 backdrop-blur border-b border-white/10 bg-black/40">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-          <h1 className="font-bold text-xl tracking-wide">
-            Astrid Digital
-          </h1>
+      <nav className="flex items-center justify-between max-w-6xl mx-auto px-6 py-6">
+        <h1 className="text-xl font-bold tracking-wide">
+          Astrid Digital
+        </h1>
 
-          <div className="hidden md:flex gap-8 text-sm text-gray-300">
-            <a href="#services" className="hover:text-white">Services</a>
-            <a href="#testimonials" className="hover:text-white">Testimonials</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
-          </div>
-
-          <a href="#contact">
-            <Button className="bg-white text-black hover:bg-gray-200">
-              Start Project
-            </Button>
-          </a>
-
+        <div className="flex gap-6 text-sm text-gray-300">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
         </div>
+
+        <a
+          href="https://calendly.com"
+          target="_blank"
+        >
+          <Button className="bg-white text-black hover:bg-gray-200">
+            Book Call
+          </Button>
+        </a>
       </nav>
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 pt-28 pb-24 text-center">
+
+      <section className="max-w-5xl mx-auto px-6 py-28 text-center">
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: .8 }}
-          className="text-5xl md:text-6xl font-bold leading-tight mb-6"
+          className="text-5xl md:text-6xl font-bold mb-6"
         >
-          Premium Remote Support  
-          <br />
-          For Growing Businesses
+          Premium Remote Business Support
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-gray-400 text-lg max-w-2xl mx-auto mb-10"
-        >
-          Astrid Digital helps founders scale faster with high-quality
-          content, operational support, and streamlined digital systems.
-        </motion.p>
+        <p className="text-gray-400 text-lg mb-10">
+          Agency-level content, operations, and digital support
+          for modern companies.
+        </p>
 
         <a href="#contact">
           <Button className="bg-white text-black px-8 py-3 text-lg hover:bg-gray-200">
-            Work With Us
+            Start Your Project
           </Button>
         </a>
 
       </section>
 
-      {/* SERVICES */}
-      <section id="services" className="max-w-6xl mx-auto px-6 pb-28">
-
-        <h2 className="text-3xl font-bold text-center mb-16">
-          Services
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8">
-
-          {services.map((s, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: .6, delay: i * .1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-white/5 border border-white/10 rounded-2xl hover:scale-[1.02] transition">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold mb-3">
-                    {s.title}
-                  </h3>
-                  <p className="text-gray-400">
-                    {s.desc}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-
-        </div>
-
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section
-        id="testimonials"
-        className="bg-black py-28 px-6 border-y border-white/10"
-      >
-
-        <h2 className="text-3xl font-bold text-center mb-20">
-          Client Results
-        </h2>
-
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8"
-            >
-              <div className="text-yellow-400 mb-4">
-                ★★★★★
-              </div>
-
-              <p className="text-gray-300 mb-6">
-                “{t.quote}”
-              </p>
-
-              <div className="font-semibold">
-                {t.name}
-              </div>
-
-              <div className="text-sm text-gray-500">
-                {t.role}
-              </div>
-            </div>
-          ))}
-
-        </div>
-
-      </section>
-
       {/* TRUST BAR */}
-      <section className="py-16 text-center">
 
-        <p className="text-gray-500 uppercase tracking-widest mb-10">
-          Trusted By Growing Brands
+      <section className="text-center pb-20">
+        <p className="text-gray-500 uppercase tracking-widest mb-8">
+          Trusted by Emerging Brands
         </p>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60 text-sm">
-          <div className="border border-white/10 py-6 rounded-xl">Brand One</div>
-          <div className="border border-white/10 py-6 rounded-xl">Brand Two</div>
-          <div className="border border-white/10 py-6 rounded-xl">Brand Three</div>
-          <div className="border border-white/10 py-6 rounded-xl">Brand Four</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 max-w-4xl mx-auto gap-6 opacity-60">
+          <div className="border border-white/10 rounded-xl py-4">Brand</div>
+          <div className="border border-white/10 rounded-xl py-4">Brand</div>
+          <div className="border border-white/10 rounded-xl py-4">Brand</div>
+          <div className="border border-white/10 rounded-xl py-4">Brand</div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+
+      <section
+        id="services"
+        className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-28"
+      >
+        {services.map((s, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: .6, delay: i * .15 }}
+            viewport={{ once: true }}
+          >
+            <Card className={cardStyle}>
+              <CardContent>
+                <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
+                <p className="text-gray-400">{s.desc}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </section>
+
+      {/* TESTIMONIAL */}
+
+      <section className="py-24 px-6 bg-black text-center">
+
+        <h2 className="text-4xl font-bold mb-12">
+          Client Experience
+        </h2>
+
+        <div className="max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur">
+
+          <div className="text-yellow-400 text-xl mb-4">
+            ★★★★★
+          </div>
+
+          <p className="text-gray-300 text-lg mb-6">
+            Working with Astrid Digital completely elevated our online presence.
+            The process was seamless and the final product exceeded expectations.
+          </p>
+
+          <h4 className="font-semibold">
+            Founding Client
+          </h4>
+
+        </div>
+
+      </section>
+
+      {/* PRICING */}
+
+      <section
+        id="pricing"
+        className="max-w-6xl mx-auto px-6 py-28 text-center"
+      >
+
+        <h2 className="text-4xl font-bold mb-16">
+          Investment
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {pricing.map((p, i) => (
+
+            <div
+              key={i}
+              className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur hover:scale-105 transition"
+            >
+
+              <h3 className="text-2xl font-semibold mb-4">
+                {p.name}
+              </h3>
+
+              <p className="text-3xl font-bold mb-6">
+                {p.price}
+              </p>
+
+              <div className="space-y-2 mb-8 text-gray-400">
+
+                {p.features.map((f, index) => (
+                  <p key={index}>{f}</p>
+                ))}
+
+              </div>
+
+              <a href="#contact">
+                <Button className="bg-white text-black w-full">
+                  Get Started
+                </Button>
+              </a>
+
+            </div>
+
+          ))}
+
         </div>
 
       </section>
 
       {/* CONTACT */}
+
       <section
         id="contact"
         className="max-w-3xl mx-auto px-6 pb-32 text-center"
@@ -204,7 +242,7 @@ export default function Page() {
         </h2>
 
         <p className="text-gray-400 mb-10">
-          Tell us about your business and what you need help with.
+          Tell us about your business and goals.
         </p>
 
         <form
