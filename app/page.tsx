@@ -191,7 +191,7 @@ export default function Page() {
       <CardContent className="p-8">
         <h3 className="text-xl font-semibold mb-4">Starter</h3>
 
-        <p className="text-3xl font-bold mb-6">$500</p>
+        <p className="text-3xl font-bold mb-6">$1500</p>
 
         <ul className="space-y-2 text-gray-400 mb-8">
           <li>Landing Page</li>
@@ -217,7 +217,7 @@ export default function Page() {
 
         <h3 className="text-xl font-semibold mb-4 text-black">Growth</h3>
 
-        <p className="text-3xl font-bold mb-6 text-black">$1500</p>
+        <p className="text-3xl font-bold mb-6 text-black">$2500</p>
 
         <ul className="space-y-2 text-gray-600 mb-8">
           <li>Multi Page Website</li>
