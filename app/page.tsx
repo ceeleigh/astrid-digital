@@ -200,7 +200,7 @@ export default function Page() {
           <li>Mobile Optimized</li>
         </ul>
 
-        <a href="https://buy.stripe.com/eVq00l2wx1oX4hIem3dUY00">
+        <a href="https://buy.stripe.com/00w14p1st6Jh9C25PxdUY03">
           <Button className="w-full bg-white text-black hover:bg-gray-200">
             Start Your Project
           </Button>
@@ -226,7 +226,7 @@ export default function Page() {
           <li>Performance Optimization</li>
         </ul>
 
-        <a href="https://buy.stripe.com/eVq28tgnngjRaG6a5NdUY01">
+        <a href="https://buy.stripe.com/9B68wRdbb3x5cOe6TBdUY04">
           <Button className="w-full bg-black text-white hover:bg-gray-900">
             Start Your Project
           </Button>
@@ -248,7 +248,7 @@ export default function Page() {
           <li>Priority Support</li>
         </ul>
 
-        <a href="https://buy.stripe.com/4gM14pb339Vtg0q91JdUY02">
+        <a href="https://buy.stripe.com/dRm8wR3AB6JhdSi2DldUY05">
           <Button className="w-full bg-white text-black hover:bg-gray-200">
             Start Your Project
           </Button>
