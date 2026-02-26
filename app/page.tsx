@@ -258,21 +258,7 @@ export default function Page() {
 
   </div>
 </section>
-
-              <a href="#contact">
-                <Button className="bg-white text-black w-full">
-                  Get Started
-                </Button>
-              </a>
-
-            </div>
-
-          )}
-
-        </div>
-
-      </section>
-
+       
       {/* CONTACT */}
 
       <section
