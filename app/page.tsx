@@ -180,41 +180,84 @@ export default function Page() {
 
       </section>
 
-      {/* PRICING */}
+      {/* Pricing */}
+<section id="pricing" className="max-w-6xl mx-auto px-6 py-24 text-center">
+  <h2 className="text-4xl font-bold mb-16">Simple Transparent Pricing</h2>
 
-      <section
-        id="pricing"
-        className="max-w-6xl mx-auto px-6 py-28 text-center"
-      >
+  <div className="grid md:grid-cols-3 gap-8">
 
-        <h2 className="text-4xl font-bold mb-16">
-          Investment
-        </h2>
+    {/* Starter */}
+    <Card className="bg-white/5 border border-white/10 backdrop-blur-xl">
+      <CardContent className="p-8">
+        <h3 className="text-xl font-semibold mb-4">Starter</h3>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <p className="text-3xl font-bold mb-6">$500</p>
 
-          {pricing.map((p, i) => (
+        <ul className="space-y-2 text-gray-400 mb-8">
+          <li>Landing Page</li>
+          <li>Contact Form</li>
+          <li>Basic Branding</li>
+          <li>Mobile Optimized</li>
+        </ul>
 
-            <div
-              key={i}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur hover:scale-105 transition"
-            >
+        <a href="https://buy.stripe.com/eVq00l2wx1oX4hIem3dUY00">
+          <Button className="w-full bg-white text-black hover:bg-gray-200">
+            Start Your Project
+          </Button>
+        </a>
+      </CardContent>
+    </Card>
 
-              <h3 className="text-2xl font-semibold mb-4">
-                {p.name}
-              </h3>
+    {/* Growth */}
+    <Card className="bg-white border border-white/20 shadow-2xl scale-105">
+      <CardContent className="p-8">
+        <p className="text-sm font-semibold mb-2 text-gray-500">
+          MOST POPULAR
+        </p>
 
-              <p className="text-3xl font-bold mb-6">
-                {p.price}
-              </p>
+        <h3 className="text-xl font-semibold mb-4 text-black">Growth</h3>
 
-              <div className="space-y-2 mb-8 text-gray-400">
+        <p className="text-3xl font-bold mb-6 text-black">$1500</p>
 
-                {p.features.map((f, index) => (
-                  <p key={index}>{f}</p>
-                ))}
+        <ul className="space-y-2 text-gray-600 mb-8">
+          <li>Multi Page Website</li>
+          <li>SEO Setup</li>
+          <li>Analytics Integration</li>
+          <li>Performance Optimization</li>
+        </ul>
 
-              </div>
+        <a href="https://buy.stripe.com/eVq28tgnngjRaG6a5NdUY01">
+          <Button className="w-full bg-black text-white hover:bg-gray-900">
+            Start Your Project
+          </Button>
+        </a>
+      </CardContent>
+    </Card>
+
+    {/* Premium */}
+    <Card className="bg-white/5 border border-white/10 backdrop-blur-xl">
+      <CardContent className="p-8">
+        <h3 className="text-xl font-semibold mb-4">Premium</h3>
+
+        <p className="text-3xl font-bold mb-6">$3500+</p>
+
+        <ul className="space-y-2 text-gray-400 mb-8">
+          <li>Custom Design</li>
+          <li>Conversion Optimization</li>
+          <li>Automation Setup</li>
+          <li>Priority Support</li>
+        </ul>
+
+        <a href="https://buy.stripe.com/4gM14pb339Vtg0q91JdUY02">
+          <Button className="w-full bg-white text-black hover:bg-gray-200">
+            Start Your Project
+          </Button>
+        </a>
+      </CardContent>
+    </Card>
+
+  </div>
+</section>
 
               <a href="#contact">
                 <Button className="bg-white text-black w-full">
@@ -224,7 +267,7 @@ export default function Page() {
 
             </div>
 
-          ))}
+          )}
 
         </div>
 
