@@ -1,150 +1,150 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function Page() {
 
   const services = [
     {
       title: "Content Writing & Copywriting",
-      desc: "High-converting messaging designed to attract and convert customers."
+      desc: "Professional website, blog, and marketing content designed to convert visitors into customers.",
+      icon: "✍️",
     },
     {
       title: "Virtual Assistance",
-      desc: "Operational support that frees business owners to focus on growth."
+      desc: "Inbox management, scheduling, research, and day‑to‑day business support for busy entrepreneurs.",
+      icon: "🧩",
     },
     {
-      title: "Data Analysis",
-      desc: "Clear reporting and insights to help businesses make smarter decisions."
+      title: "Data & Reporting",
+      desc: "Clean spreadsheets, reporting dashboards, and organized data so you can make smarter decisions.",
+      icon: "📊",
     },
     {
       title: "Customer Support",
-      desc: "Professional client communication that strengthens brand loyalty."
-    }
+      desc: "Professional email and chat support that keeps your customers happy and loyal.",
+      icon: "💬",
+    },
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$2,000",
+      price: "$1,500",
+      desc: "Perfect for small businesses needing reliable monthly support.",
       features: [
-        "1 Page Premium Website",
-        "Mobile Optimization",
-        "Contact Form Setup",
-        "Basic SEO Setup"
-      ]
+        "Virtual Assistant Support",
+        "Content Writing",
+        "Customer Email Support",
+        "Basic Data Organization",
+      ],
+      link: "https://buy.stripe.com/00w14p1st6Jh9C25PxdUY03",
     },
     {
       name: "Growth",
-      price: "$3,500",
+      price: "$2,500",
+      desc: "For growing businesses ready to scale operations.",
       features: [
-        "Multi-Page Website",
-        "Brand Styling",
-        "Lead Capture System",
-        "Performance Optimization"
-      ]
+        "Everything in Starter",
+        "Advanced Data Reporting",
+        "Workflow Optimization",
+        "Priority Support",
+      ],
+      link: "https://buy.stripe.com/9B68wRdbb3x5cOe6TBdUY04",
     },
     {
       name: "Premium",
-      price: "$5,000",
+      price: "$3,500",
+      desc: "Full operational support for serious businesses.",
       features: [
-        "Full Business Website",
-        "Automation Setup",
-        "Analytics Dashboard",
-        "Priority Support"
-      ]
-    }
+        "Dedicated Business Support",
+        "Content + Marketing Assistance",
+        "Customer Service Management",
+        "Operations Consulting",
+      ],
+      link: "https://buy.stripe.com/dRm8wR3AB6JhdSi2DldUY05",
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        "Astrid Digital helped streamline our entire workflow. We finally feel organized and focused.",
+      name: "Shylah M.",
+      role: "Operations Manager",
+    },
+    {
+      quote:
+        "The content writing alone paid for itself. Our website finally sounds professional.",
+      name: "David R.",
+      role: "Startup Founder",
+    },
   ];
 
   const cardStyle =
-    "rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10 transition-all duration-300";
+    "rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 hover:-translate-y-2 hover:shadow-xl hover:shadow-white/10 transition-all";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
 
       {/* NAVBAR */}
+      <nav className="sticky top-0 z-50 backdrop-blur-lg border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="font-bold text-lg">Astrid Digital Agency</h1>
 
-      <nav className="flex items-center justify-between max-w-6xl mx-auto px-6 py-6">
-        <h1 className="text-xl font-bold tracking-wide">
-          Astrid Digital
-        </h1>
-
-        <div className="flex gap-6 text-sm text-gray-300">
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
+          <div className="space-x-6 text-sm">
+           <a href="#services" className="hover:text-gray-300">Services</a>
+<a href="#pricing" className="hover:text-gray-300">Pricing</a>
+<a href="#custom" className="hover:text-gray-300">Custom Plan</a>
+<a href="#testimonials" className="hover:text-gray-300">Testimonials</a>
+<a href="#contact" className="hover:text-gray-300">Contact</a>
+ 
+          </div>
         </div>
-
-        <a
-          href="https://calendly.com"
-          target="_blank"
-        >
-          <Button className="bg-white text-black hover:bg-gray-200">
-            Book Call
-          </Button>
-        </a>
       </nav>
 
       {/* HERO */}
-
       <section className="max-w-5xl mx-auto px-6 py-28 text-center">
-
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: .8 }}
+          transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-bold mb-6"
         >
-          Premium Remote Business Support
+          Premium Digital Business Support
         </motion.h1>
 
         <p className="text-gray-400 text-lg mb-10">
-          Agency-level content, operations, and digital support
-          for modern companies.
+          Astrid Digital Agency helps businesses stay organized, efficient,
+          and focused on growth through professional remote support.
         </p>
 
-        <a href="#contact">
+        <a href="#pricing">
           <Button className="bg-white text-black px-8 py-3 text-lg hover:bg-gray-200">
-            Start Your Project
+            View Pricing
           </Button>
         </a>
-
-      </section>
-
-      {/* TRUST BAR */}
-
-      <section className="text-center pb-20">
-        <p className="text-gray-500 uppercase tracking-widest mb-8">
-          Trusted by Emerging Brands
-        </p>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 max-w-4xl mx-auto gap-6 opacity-60">
-          <div className="border border-white/10 rounded-xl py-4">Brand</div>
-          <div className="border border-white/10 rounded-xl py-4">Brand</div>
-          <div className="border border-white/10 rounded-xl py-4">Brand</div>
-          <div className="border border-white/10 rounded-xl py-4">Brand</div>
-        </div>
       </section>
 
       {/* SERVICES */}
-
       <section
         id="services"
-        className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-28"
+        className="max-w-6xl mx-auto px-6 pb-28 grid md:grid-cols-2 gap-8"
       >
         {services.map((s, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: .6, delay: i * .15 }}
+            transition={{ delay: i * 0.1 }}
             viewport={{ once: true }}
           >
             <Card className={cardStyle}>
               <CardContent>
+                <div className="text-3xl mb-3">{s.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
                 <p className="text-gray-400">{s.desc}</p>
               </CardContent>
@@ -153,122 +153,121 @@ export default function Page() {
         ))}
       </section>
 
-      {/* TESTIMONIAL */}
+      {/* PRICING */}
+      <section id="pricing" className="max-w-6xl mx-auto px-6 pb-32">
 
-      <section className="py-24 px-6 bg-black text-center">
+        <h2 className="text-3xl font-bold text-center mb-14">Pricing</h2>
 
-        <h2 className="text-4xl font-bold mb-12">
-          Client Experience
-        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {pricing.map((plan, i) => (
+            <Card key={i} className="rounded-2xl bg-white/5 border border-white/10 p-6">
+              <CardContent>
 
-        <div className="max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur">
+                <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
+                <p className="text-3xl font-bold mb-4">{plan.price}</p>
+                <p className="text-gray-400 mb-6">{plan.desc}</p>
 
-          <div className="text-yellow-400 text-xl mb-4">
-            ★★★★★
-          </div>
+                <ul className="space-y-2 text-sm text-gray-300 mb-6">
+                  {plan.features.map((f, idx) => (
+                    <li key={idx}>• {f}</li>
+                  ))}
+                </ul>
 
-          <p className="text-gray-300 text-lg mb-6">
-            Working with Astrid Digital completely elevated our online presence.
-            The process was seamless and the final product exceeded expectations.
-          </p>
+                <a href={plan.link} target="_blank">
+                  <Button className="w-full bg-white text-black hover:bg-gray-200">
+                    Choose Plan
+                  </Button>
+                </a>
 
-          <h4 className="font-semibold">
-            Founding Client
-          </h4>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
+      </section>
+{/* CUSTOM PLAN */}
+<section id="custom" className="max-w-5xl mx-auto px-6 pb-32 text-center">
+
+  <h2 className="text-3xl font-bold mb-6">
+    Build Your Own Plan
+  </h2>
+
+  <p className="text-gray-400 mb-12">
+    Not every business needs a full package. Choose the services you need and
+    receive a personalized quote tailored to your business.
+  </p>
+
+  <div className="grid md:grid-cols-2 gap-8 text-left mb-12">
+
+    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+      <h3 className="font-semibold mb-3">Content Services</h3>
+      <ul className="text-gray-400 space-y-2 text-sm">
+        <li>• Website copywriting</li>
+        <li>• Blog writing</li>
+        <li>• Product descriptions</li>
+      </ul>
+    </div>
+
+    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+      <h3 className="font-semibold mb-3">Business Operations</h3>
+      <ul className="text-gray-400 space-y-2 text-sm">
+        <li>• Virtual assistant tasks</li>
+        <li>• Inbox management</li>
+        <li>• Scheduling & research</li>
+      </ul>
+    </div>
+
+    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+      <h3 className="font-semibold mb-3">Customer Support</h3>
+      <ul className="text-gray-400 space-y-2 text-sm">
+        <li>• Email support</li>
+        <li>• Live chat support</li>
+        <li>• CRM updates</li>
+      </ul>
+    </div>
+
+    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+      <h3 className="font-semibold mb-3">Data & Reporting</h3>
+      <ul className="text-gray-400 space-y-2 text-sm">
+        <li>• Spreadsheet cleanup</li>
+        <li>• Data entry</li>
+        <li>• Reporting dashboards</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <a href="#contact">
+    <Button className="bg-white text-black px-10 py-4 text-lg hover:bg-gray-200">
+      Request Custom Quote
+    </Button>
+  </a>
+
+</section>
+
+      {/* TESTIMONIALS */}
+      <section id="testimonials" className="max-w-5xl mx-auto px-6 pb-32">
+
+        <h2 className="text-3xl font-bold text-center mb-14">Testimonials</h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {testimonials.map((t, i) => (
+            <Card key={i} className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+              <CardContent>
+                <p className="text-gray-300 mb-4">"{t.quote}"</p>
+                <p className="font-semibold">{t.name}</p>
+                <p className="text-sm text-gray-400">{t.role}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
       </section>
 
-      {/* Pricing */}
-<section id="pricing" className="max-w-6xl mx-auto px-6 py-24 text-center">
-  <h2 className="text-4xl font-bold mb-16">Simple Transparent Pricing</h2>
-
-  <div className="grid md:grid-cols-3 gap-8">
-
-    {/* Starter */}
-    <Card className="bg-white/5 border border-white/10 backdrop-blur-xl">
-      <CardContent className="p-8">
-        <h3 className="text-xl font-semibold mb-4">Starter</h3>
-
-        <p className="text-3xl font-bold mb-6">$1500</p>
-
-        <ul className="space-y-2 text-gray-400 mb-8">
-          <li>Landing Page</li>
-          <li>Contact Form</li>
-          <li>Basic Branding</li>
-          <li>Mobile Optimized</li>
-        </ul>
-
-        <a href="https://buy.stripe.com/00w14p1st6Jh9C25PxdUY03">
-          <Button className="w-full bg-white text-black hover:bg-gray-200">
-            Start Your Project
-          </Button>
-        </a>
-      </CardContent>
-    </Card>
-
-    {/* Growth */}
-    <Card className="bg-white border border-white/20 shadow-2xl scale-105">
-      <CardContent className="p-8">
-        <p className="text-sm font-semibold mb-2 text-gray-500">
-          MOST POPULAR
-        </p>
-
-        <h3 className="text-xl font-semibold mb-4 text-black">Growth</h3>
-
-        <p className="text-3xl font-bold mb-6 text-black">$2500</p>
-
-        <ul className="space-y-2 text-gray-600 mb-8">
-          <li>Multi Page Website</li>
-          <li>SEO Setup</li>
-          <li>Analytics Integration</li>
-          <li>Performance Optimization</li>
-        </ul>
-
-        <a href="https://buy.stripe.com/9B68wRdbb3x5cOe6TBdUY04">
-          <Button className="w-full bg-black text-white hover:bg-gray-900">
-            Start Your Project
-          </Button>
-        </a>
-      </CardContent>
-    </Card>
-
-    {/* Premium */}
-    <Card className="bg-white/5 border border-white/10 backdrop-blur-xl">
-      <CardContent className="p-8">
-        <h3 className="text-xl font-semibold mb-4">Premium</h3>
-
-        <p className="text-3xl font-bold mb-6">$3500+</p>
-
-        <ul className="space-y-2 text-gray-400 mb-8">
-          <li>Custom Design</li>
-          <li>Conversion Optimization</li>
-          <li>Automation Setup</li>
-          <li>Priority Support</li>
-        </ul>
-
-        <a href="https://buy.stripe.com/dRm8wR3AB6JhdSi2DldUY05">
-          <Button className="w-full bg-white text-black hover:bg-gray-200">
-            Start Your Project
-          </Button>
-        </a>
-      </CardContent>
-    </Card>
-
-  </div>
-</section>
-       
       {/* CONTACT */}
+      <section id="contact" className="max-w-3xl mx-auto px-6 pb-32 text-center">
 
-      <section
-        id="contact"
-        className="max-w-3xl mx-auto px-6 pb-32 text-center"
-      >
-
-        <h2 className="text-3xl font-bold mb-6">
-          Start Your Project
-        </h2>
+        <h2 className="text-3xl font-bold mb-6">Start Your Project</h2>
 
         <p className="text-gray-400 mb-10">
           Tell us about your business and goals.
